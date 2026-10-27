@@ -1,0 +1,175 @@
+/* ==========================================================================
+   ERP PRO — home.css : MISE EN PAGE DE L'ACCUEIL (style inspiré de la maquette)
+   --------------------------------------------------------------------------
+   Chargé APRÈS style.css : il ajoute les nouveaux blocs (hero en panneau,
+   pastilles qui défilent, cartes décalées, bento, orbite, carrousel, CTA).
+   La charte graphique ne change pas : mêmes variables de couleurs (--p, --pd,
+   --ac, --dk…) et mêmes polices que style.css.
+   ========================================================================== */
+
+/* ==========================================================================
+   NAVIGATION — barre « pilule » flottante (transparente sur le hero, blanche ensuite)
+   ========================================================================== */
+.hn{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1160px,calc(100% - 32px));z-index:60;border-radius:99px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:.25s}
+.hn .nv{height:64px;padding:0 10px 0 22px}
+.hn .logo,.hn .nr>a:first-child{color:#fff}
+.hn .nl{color:rgba(255,255,255,.85)}.hn .nl a:hover{color:#fff}
+.hn .btn{min-height:44px;background:#fff;color:var(--dk);box-shadow:none}
+.hn.s{background:rgba(255,255,255,.9);border-color:var(--bd);box-shadow:0 10px 30px -12px rgba(16,24,40,.2)}   /* .s = ajoutée par le script au défilement */
+.hn.s .logo,.hn.s .nr>a:first-child{color:var(--tx)}.hn.s .nl{color:var(--mu)}.hn.s .nl a:hover{color:var(--tx)}
+.hn.s .btn{background:var(--p);color:#fff}
+.mm{position:fixed;top:92px;left:16px;right:16px;z-index:59;border-radius:22px;border:1px solid var(--bd);box-shadow:var(--sh)}   /* menu mobile */
+
+/* ==========================================================================
+   OUTILS COMMUNS : pastille de section, titres centrés, nuages
+   ========================================================================== */
+.pb{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;border-radius:99px;background:#E6F6F3;border:1px solid #BDE5DF;color:var(--pd);font-size:14px;font-weight:600}
+.pb i{width:22px;height:22px;border-radius:50%;background:var(--p);display:grid;place-items:center}
+.pb svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.h2c{text-align:center;margin-bottom:52px}.h2c h2{color:var(--pd);margin-top:16px}
+.clouds{position:absolute;inset:auto 0 0;height:55%;pointer-events:none;z-index:1;opacity:.9;
+  background:radial-gradient(ellipse 26% 34% at 10% 92%,#fff 0,transparent 72%),radial-gradient(ellipse 30% 40% at 38% 104%,#fff 0,transparent 72%),
+  radial-gradient(ellipse 28% 36% at 68% 96%,#fff 0,transparent 72%),radial-gradient(ellipse 24% 32% at 96% 86%,#fff 0,transparent 72%)}   /* nuages = dégradés blancs flous */
+.ar{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff;color:var(--pd);font-style:normal;font-size:15px}
+
+/* ==========================================================================
+   HERO — grand panneau arrondi dégradé teal avec nuages, titre centré, maquette
+   ========================================================================== */
+.hp{position:relative;isolation:isolate;margin:12px;border-radius:40px;overflow:hidden;padding:150px 24px 0;text-align:center;color:#fff;
+  background:linear-gradient(180deg,#075E55 0%,#0F8F82 38%,#4FCDBE 76%,#BDEEE6 100%)}
+.hp .hc{position:relative;z-index:3;max-width:860px;margin:0 auto}
+.sp{display:inline-flex;align-items:center;gap:12px;padding:6px 18px 6px 6px;border-radius:99px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);font-size:14px;font-weight:600}
+.sp .av3{display:flex}.sp .av3 i{width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid #0F8F82;display:grid;place-items:center;margin-left:-8px}
+.sp .av3 i:first-child{margin-left:0}.sp svg{width:15px;height:15px;stroke:var(--pd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hp h1{color:#fff;font-size:clamp(38px,5.6vw,68px);font-weight:800;margin:22px 0 18px;line-height:1.05}
+.hp h1 em{background:none;-webkit-text-fill-color:#C7F7EF;color:#C7F7EF}      /* 2e partie du titre en turquoise clair */
+.hp .sub{color:rgba(255,255,255,.88);margin-inline:auto;font-size:18px}
+.cp2{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:620px;margin:34px auto 0;padding:8px 8px 8px 28px;border-radius:99px;background:rgba(255,255,255,.96);color:var(--mu);font-size:15px;text-align:left;box-shadow:0 20px 40px -18px rgba(0,0,0,.35)}
+.cp2 .btn{flex:none}.cp2 .btn .ar{background:#fff}
+.chp{position:absolute;z-index:3;top:300px;display:flex;align-items:center;gap:10px;padding:8px 18px 8px 8px;border-radius:99px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);font-size:14px;font-weight:600;backdrop-filter:blur(8px);animation:fy 6s ease-in-out infinite}
+.chp .cc{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center}.chp svg{width:17px;height:17px;stroke:var(--pd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.chp.l{left:5%}.chp.r{right:5%;animation-delay:-3s}
+/* Fond animé : scène d'entrepôt (gauche) + vidéo 3D (droite), discrets derrière le titre */
+.hp .scene{position:absolute;left:-30px;top:110px;width:min(520px,38%);opacity:.5;z-index:1;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,#000 45%,transparent 100%);mask-image:linear-gradient(90deg,#000 45%,transparent 100%)}
+.hp .vbg{position:absolute;right:-20px;top:100px;width:min(600px,42%);aspect-ratio:16/9;object-fit:cover;opacity:.9;z-index:1;pointer-events:none;mix-blend-mode:multiply;
+  -webkit-mask-image:radial-gradient(ellipse 58% 68% at 52% 46%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 58% 68% at 52% 46%,#000 52%,transparent 100%)}
+/* Maquette « ordinateur » + cartes flottantes */
+.hs{position:relative;z-index:2;max-width:1040px;margin:64px auto 0}
+.hs .app{border:9px solid #0B1220;border-bottom:0;border-radius:26px 26px 0 0;box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+.fc{position:absolute;z-index:4;background:#fff;color:var(--tx);border-radius:18px;padding:16px 18px;text-align:left;box-shadow:0 24px 50px -20px rgba(16,24,40,.45);animation:fy 7s ease-in-out infinite}
+.fc small{display:block;color:var(--mu);font-size:12.5px;font-weight:600}.fc b{font:800 26px 'Bricolage Grotesque'}
+.fc.a{left:-70px;bottom:70px;width:230px}.fc.b{right:-70px;bottom:110px;width:250px;display:flex;gap:14px;align-items:center;animation-delay:-3.5s}
+.fc.b b{font-size:15px}.fc.b small{font-size:12px}
+
+/* ==========================================================================
+   PASTILLES QUI DÉFILENT (2 rangées en sens inverse)
+   ========================================================================== */
+.mqw{overflow:hidden;padding:44px 0 20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq{display:flex;width:max-content;animation:mq 40s linear infinite;margin-bottom:14px}.mq.r{animation-direction:reverse}.mq.slow{animation-duration:60s}
+@keyframes mq{to{transform:translateX(-50%)}}                   /* la liste est écrite 2 fois : on défile d'une moitié */
+.mp{display:inline-flex;align-items:center;gap:10px;margin-right:14px;padding:10px 22px 10px 10px;border-radius:99px;background:#fff;border:1px solid var(--bd);font-weight:600;font-size:15px;white-space:nowrap}
+.mp i{width:32px;height:32px;border-radius:50%;background:#E6F6F3;display:grid;place-items:center}
+.mp svg{width:16px;height:16px;stroke:var(--pd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mp.on{background:#E6F6F3;border-color:#9FDCD2}
+
+/* ==========================================================================
+   SECTION « SIMPLIFIEZ » — 3 cartes décalées + dashboard incliné
+   ========================================================================== */
+.sm{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.sl{display:grid;gap:16px}
+.sk{display:flex;gap:18px;align-items:flex-start;padding:22px 24px;border-radius:22px;background:#fff;border:1px solid #BDE5DF;box-shadow:var(--sh)}
+.sk:nth-child(2){background:linear-gradient(135deg,var(--pd),var(--p));color:#fff;border-color:transparent;margin-left:30px}   /* carte du milieu = pleine, décalée */
+.sk:nth-child(3){margin-left:12px}
+.sk .ic{flex:none;width:52px;height:52px;border-radius:50%}
+.sk:nth-child(2) .ic{background:rgba(255,255,255,.2)}.sk:nth-child(2) .ic svg{stroke:#fff}
+.sk h3{font-size:17px;margin-bottom:4px}.sk p{margin:0;font-size:14.5px;color:var(--mu)}.sk:nth-child(2) p{color:rgba(255,255,255,.88)}
+.tw{position:relative;width:100%;max-width:620px;margin:auto;aspect-ratio:1060/720}
+.tbk{position:absolute;inset:8% -3% -4% 10%;border-radius:34px;background:linear-gradient(135deg,var(--p),var(--ac));transform:rotate(-6deg);opacity:.9}   /* plaque teal inclinée derrière */
+.tt{position:absolute;inset:0;transform:perspective(1500px) rotateY(-12deg) rotateX(4deg)}
+.ti{position:absolute;left:0;top:0;width:1060px;transform-origin:0 0;transform:scale(var(--s,.58))}   /* --s calculée par le script pour tenir dans la colonne */
+
+/* ==========================================================================
+   SECTION BENTO « TECHNOLOGIE » — 3 cartes en haut, 1 large en bas, 1 haute à droite
+   ========================================================================== */
+.tg2{display:grid;grid-template-columns:1fr 1fr 1.05fr;gap:20px}
+.tc{display:flex;flex-direction:column;gap:14px;padding:14px 14px 24px;border-radius:26px;background:#fff;border:1px solid var(--bd);box-shadow:var(--sh)}
+.tc.tall{grid-column:3;grid-row:1/3}.tc.wide{grid-column:1/3;flex-direction:row;align-items:center;gap:24px;padding:14px 28px 14px 14px}
+.tv{position:relative;overflow:hidden;min-height:210px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(160deg,#0B6F65,#22C7B5)}
+.tc.tall .tv{flex:1;min-height:380px;align-items:end}.tc.wide .tv{flex:0 0 46%}
+.tc h3{font-size:19px;padding:0 10px}.tc p{margin:0;padding:0 10px;color:var(--mu);font-size:14.5px}.tc .btn{margin:6px 10px 0;align-self:flex-start}
+.tc.wide>div:last-child{display:grid;gap:10px}
+.mc{background:#fff;border-radius:16px;padding:14px 16px;box-shadow:0 14px 30px -14px rgba(0,0,0,.4);font-size:12.5px;font-weight:600;color:var(--tx);display:grid;gap:8px;justify-items:center}
+.mc .lg2{display:flex;gap:12px;color:var(--mu)}.mc .lg2 b{color:var(--pd)}
+.oc{position:relative;width:200px;height:200px}.oc>i{position:absolute;border-radius:50%;background:#fff;display:grid;place-items:center;width:40px;height:40px;transform:translate(-50%,-50%);box-shadow:0 8px 18px -8px rgba(0,0,0,.4)}
+.oc>i svg{width:19px;height:19px;stroke:var(--pd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.oc .rg0{position:absolute;inset:14%;border:1.5px dashed rgba(255,255,255,.45);border-radius:50%}
+.oc .c0{left:50%;top:50%;width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--p),var(--ac));box-shadow:0 0 0 8px rgba(255,255,255,.2)}
+/* Téléphone (carte haute « hors-ligne ») */
+.phn{width:178px;height:330px;border-radius:32px;background:#0B1220;padding:8px;box-shadow:0 30px 50px -20px rgba(0,0,0,.6);transform:translateY(34px)}
+.sc2{height:100%;border-radius:25px;background:#fff;padding:16px 14px;display:flex;flex-direction:column;gap:10px;color:var(--tx);text-align:left;font-size:12px;font-weight:600}
+.sc2 .tp{display:flex;justify-content:space-between;align-items:center}.sc2 .tp b{font:700 15px 'Bricolage Grotesque'}
+.sc2 .ln2{display:flex;justify-content:space-between;padding:8px 10px;border-radius:10px;background:#F2F4F7}
+.sc2 .bt{margin-top:auto;background:var(--p);color:#fff;text-align:center;padding:10px;border-radius:12px;font-weight:700}
+.sc2 .sy2{font-size:11px;color:var(--mu);text-align:center}
+
+/* ==========================================================================
+   SECTION « COMMENT ÇA MARCHE » — pile de cartes + pastille tournante + étapes
+   ========================================================================== */
+.hw{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.stk{position:relative;max-width:440px;width:100%;margin:auto}
+.stk:before,.stk:after{content:"";position:absolute;inset:0;border-radius:26px;background:#fff;border:1px solid var(--bd);box-shadow:var(--sh)}
+.stk:before{transform:translate(44px,-16px) rotate(4deg);opacity:.55}.stk:after{transform:translate(22px,-8px) rotate(2deg);opacity:.85}
+.stk .tc{position:relative;z-index:1}
+.bdg{width:128px;height:128px;margin:0 0 18px auto;animation:spin 20s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.stps{display:grid;gap:14px}
+.stp{display:flex;align-items:center;gap:14px;padding:12px 26px 12px 12px;border-radius:99px;background:#fff;border:1px solid #BDE5DF;font-weight:600;cursor:pointer;transition:.25s}
+.stp i{flex:none;width:40px;height:40px;border-radius:50%;background:#E6F6F3;display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--pd)}
+.stp.on{background:linear-gradient(90deg,var(--pd),var(--p));color:#fff;border-color:transparent}.stp.on i{background:rgba(255,255,255,.2);color:#fff}
+
+/* ==========================================================================
+   PANNEAU « TOUS VOS MODULES » — orbite d'icônes sur fond teal avec nuages
+   ========================================================================== */
+.mo{position:relative;isolation:isolate;margin:0 12px;border-radius:40px;overflow:hidden;padding:84px 24px 150px;text-align:center;color:#fff;background:linear-gradient(180deg,#075E55,#0F8F82 55%,#58D3C4)}
+.mo .pb,.cta2 .pb{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.3);color:#fff}.mo .pb i{background:#fff}.mo .pb svg{stroke:var(--pd)}
+.mo h2,.cta2 h2{color:#fff;margin-top:16px}
+.orb{position:relative;z-index:2;width:min(660px,94%);aspect-ratio:1/.8;margin:36px auto 0}
+.orb .rg{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px dashed rgba(255,255,255,.35);border-radius:50%}
+.orb .ct{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:118px;height:118px;border-radius:32px;background:linear-gradient(135deg,var(--p),var(--ac));display:grid;place-items:center;box-shadow:0 0 0 14px rgba(255,255,255,.18),0 0 60px rgba(255,255,255,.6)}
+.orb .ob{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.4);animation:bob2 6s ease-in-out infinite}
+@keyframes bob2{50%{margin-top:-42px}}
+.orb .ob svg{width:27px;height:27px;stroke:var(--pd);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.orb .ob span{position:absolute;top:70px;font-size:13px;font-weight:600;color:#fff;white-space:nowrap}
+
+/* ==========================================================================
+   CARROUSEL « CE QUE ERP PRO CHANGE POUR VOUS » (cartes qui défilent)
+   ========================================================================== */
+.bhd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}.bhd h2{color:var(--pd);margin-top:14px}
+.bn{flex:none;width:330px;margin-right:18px;padding:24px;border-radius:22px;background:#fff;border:1px solid var(--bd);box-shadow:var(--sh);white-space:normal}
+.bn:nth-child(even){transform:translateY(14px)}.bn h3{font-size:18px;margin:14px 0 6px}.bn p{margin:0;color:var(--mu);font-size:14.5px}
+
+/* ==========================================================================
+   APPEL À L'ACTION FINAL — panneau teal, boîte pilule, bulles de réseaux
+   ========================================================================== */
+.cta2{position:relative;isolation:isolate;max-width:1160px;margin:0 auto;border-radius:36px;overflow:hidden;padding:90px 24px 100px;text-align:center;color:#fff;background:linear-gradient(135deg,#075E55,#0F8F82 60%,#22C7B5)}
+.cta2>*{position:relative;z-index:2}.cta2 .clouds{z-index:1;height:45%;opacity:.45}
+.cta2 h2{max-width:640px;margin:0 auto}.cta2 .cp2{margin-top:30px}
+.sb{position:absolute!important;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);display:grid;place-items:center;backdrop-filter:blur(6px)}
+.sb svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sb.s1{left:7%;top:24%}.sb.s2{left:12%;bottom:22%}.sb.s3{right:8%;top:30%}
+.cta2-wrap{padding:0 12px 96px}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media(max-width:1100px){.chp,.fc{display:none}}
+@media(max-width:960px){
+  .hp{padding-top:130px;border-radius:30px}.hp .scene{display:none}.hp .vbg{opacity:.35;width:90%;right:-25%}
+  .sm,.hw{grid-template-columns:1fr}.sk:nth-child(2),.sk:nth-child(3){margin-left:0}
+  .tg2{grid-template-columns:1fr 1fr}.tc.tall{grid-column:1/3;grid-row:auto}.tc.wide{grid-column:1/3}
+  .mo{border-radius:30px}.orb{aspect-ratio:1/1}}
+@media(max-width:640px){
+  .tg2{grid-template-columns:1fr}.tc.tall,.tc.wide{grid-column:auto}.tc.wide{flex-direction:column;padding:14px 14px 24px}.tc.wide .tv{flex:none;width:100%}
+  .cp2{flex-direction:column;border-radius:26px;padding:18px;text-align:center}.cp2 .btn{width:100%;justify-content:center}
+  .bn{width:280px}.orb .ob{width:54px;height:54px;margin:-27px 0 0 -27px}.orb .ob span{display:none}.orb .ct{width:90px;height:90px}.sb{display:none!important}}
+.cta2>.clouds{position:absolute}

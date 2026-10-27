@@ -1,0 +1,169 @@
+<!doctype html>
+<!--
+  ============================================================
+  ERP PRO — PAGE « FONCTIONNALITÉS » (détail des 10 modules)
+  ============================================================
+  Cette page est ouverte par le bouton « Voir plus » de l'accueil.
+  Elle utilise le même design que l'accueil (fichier style.css)
+  + quelques styles propres à cette page (balise <style> ci-dessous).
+
+  Les blocs de fonctionnalités sont GÉNÉRÉS par le JavaScript en bas
+  de page, à partir de la liste « F » : pour modifier un texte ou
+  ajouter une fonctionnalité, modifiez cette liste (voir les commentaires).
+  ============================================================
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fonctionnalités – ERP Pro</title>
+<meta name="description" content="Découvrez en détail les fonctionnalités d'ERP Pro : multi-sites, stocks, ventes, achats, rapports, comptabilité, employés, clients, documents et mode hors-ligne.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Design commun à tout le site -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* ======================================================================
+   STYLES PROPRES À CETTE PAGE
+   Les couleurs et les boutons viennent de style.css (variables --p, --ac, etc.)
+   ====================================================================== */
+/* EN-TÊTE DE LA PAGE (titre + pastilles de navigation) */
+.ph{padding:48px 0 24px;background:radial-gradient(900px 380px at 80% -10%,rgba(34,199,181,.16),transparent 60%)}
+.ph .back{font-weight:600;font-size:14px;color:var(--pd)}
+.ph h1{font-size:clamp(34px,5vw,56px);margin:20px 0 16px;max-width:760px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.pills a{font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:99px;background:#fff;border:1px solid var(--bd);transition:.2s}
+.pills a:hover{border-color:var(--p);color:var(--pd)}
+/* UNE FONCTIONNALITÉ = une ligne : texte d'un côté, illustration de l'autre (inversée une ligne sur deux) */
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;padding:64px 0;border-top:1px solid var(--bd)}
+.fr:first-child{border-top:0}.fr:nth-child(even) .ft{order:2}
+.ft h2{font-size:clamp(26px,3.2vw,36px);margin:18px 0 12px}.ft .sub{margin:0;font-size:17px}
+/* Liste à puces avec coches vertes */
+.ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.ul li{display:flex;gap:10px;font-size:15px}
+.ul li:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:#E6F6F3;color:var(--p);display:grid;place-items:center;font-size:12px;font-weight:700}
+/* Cadre de l'illustration (fond dégradé clair) */
+.ill{background:linear-gradient(135deg,#E6F6F3,#F8FAFC);border:1px solid var(--bd);border-radius:22px;padding:28px;display:grid;gap:10px;align-content:center;min-height:300px;box-shadow:var(--sh)}
+/* Éléments des illustrations : .it = ligne · .tg = étiquette (.w orange, .n grise) · .tot = ligne de total sombre */
+.it{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border:1px solid var(--bd);border-radius:12px;padding:12px 14px;font-size:14px;font-weight:600}
+.it small{display:block;color:var(--mu);font-weight:500;font-size:12.5px}
+.tg{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F6F3;color:var(--pd);font-weight:700;white-space:nowrap}
+.tg.w{background:#FEF3E6;color:#B54708}.tg.n{background:#F2F4F7;color:var(--mu)}
+.it.tot{background:var(--dk);color:#fff;border-color:var(--dk)}
+/* Faux bouton « Encaisser » de l'illustration Ventes */
+.cb{background:var(--p);color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:700;font-size:14px}
+/* Faux document de l'illustration « Bons et documents » */
+.doc{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:18px}.doc i{display:block;height:8px;border-radius:4px;background:#EEF2F6;margin:12px 0}.doc i:nth-of-type(2){width:70%}.doc i:nth-of-type(3){width:85%}
+/* MOBILE : texte et illustration s'empilent */
+@media(max-width:860px){.fr{grid-template-columns:1fr;gap:32px;padding:48px 0}.fr:nth-child(even) .ft{order:0}.ill{min-height:0;padding:20px}}
+</style>
+</head>
+<body id="top">
+<!-- ======================================================================
+     SECTION : NAVIGATION (identique à l'accueil)
+     Les liens ramènent vers les sections de index.html (ex. index.html#faq)
+     ====================================================================== -->
+<header class="nav" id="nav"><div class="w nv">
+<a href="index.html" class="logo" aria-label="ERP Pro, accueil"><span class="lg"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>ERP Pro</a>
+<nav aria-label="Navigation principale"><ul class="nl"><li><a href="index.html#produit">Produit</a></li><li><a href="index.html#fonctionnalites" aria-current="page" style="color:var(--tx)">Fonctionnalités</a></li><li><a href="index.html#secteurs">Secteurs</a></li><li><a href="index.html#a-propos">À propos</a></li><li><a href="index.html#faq">FAQ</a></li></ul></nav>
+<div class="nr"><a href="index.html#contact">Se connecter</a><a href="index.html#contact" class="btn b1">Demander une démo <i>→</i></a>
+<button class="bg" id="bg" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mm"><span></span></button></div></div>
+<div class="mm" id="mm"><a href="index.html#produit">Produit</a><a href="index.html#fonctionnalites">Fonctionnalités</a><a href="index.html#secteurs">Secteurs</a><a href="index.html#a-propos">À propos</a><a href="index.html#faq">FAQ</a><a href="index.html#contact">Se connecter</a><a href="index.html#contact" class="btn b1">Demander une démo →</a></div>
+</header>
+
+<main>
+<!-- ======================================================================
+     SECTION : EN-TÊTE DE LA PAGE
+     Lien de retour · titre · pastilles qui mènent à chaque fonctionnalité (créées par le script)
+     ====================================================================== -->
+<section class="ph"><div class="w">
+<a href="index.html" class="back">← Retour à l'accueil</a>
+<h1>Toutes les fonctionnalités d'ERP Pro</h1>
+<p class="sub">Dix modules qui travaillent ensemble pour vous donner le contrôle de votre activité, de la caisse à la comptabilité.</p>
+<div class="pills" id="pills"></div></div></section>
+<!-- ======================================================================
+     SECTION : LISTE DES FONCTIONNALITÉS
+     Vide dans le HTML : le script en bas de page y ajoute les 10 blocs.
+     ====================================================================== -->
+<section><div class="w" id="list"></div></section>
+<!-- ======================================================================
+     SECTION : APPEL À L'ACTION FINAL
+     Bouton démo (WhatsApp) et e-mail de contact.
+     ====================================================================== -->
+<section class="fin" id="contact" style="padding-top:40px"><div class="fb rv"><h2>Prêt à reprendre le contrôle de votre activité ?</h2>
+<p>Découvrez comment ERP Pro peut simplifier votre gestion et vous donner une vision claire de votre entreprise.</p>
+<div class="cta" style="margin:0"><a href="https://wa.me/22892877153?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27ERP%20Pro." class="btn b3" target="_blank" rel="noopener">Demander une démo <i>→</i></a><a href="mailto:gbadamassia@gmail.com?subject=Demande%20de%20d%C3%A9mo%20ERP%20Pro" class="btn ghost b2" style="background:transparent">gbadamassia@gmail.com</a></div></div></section>
+</main>
+
+<!-- ======================================================================
+     SECTION : PIED DE PAGE (version courte)
+     ====================================================================== -->
+<footer><div class="w"><div class="cp" style="margin:0;padding:0;border:0"><span>© 2026 ERP Pro. Tous droits réservés.</span><a href="index.html">Retour à l'accueil</a></div></div></footer>
+
+<!-- ======================================================================
+     SCRIPT DE LA PAGE : fabrique les blocs de fonctionnalités + menu + animations
+     ====================================================================== -->
+<script>
+(function(){
+// ======================================================================
+// OUTILS pour dessiner les illustrations (petites maquettes d'interface)
+// it(titre, sous-titre, étiquette, style) = une ligne de liste · tot(nom, valeur) = ligne de total
+// bars([hauteurs en %]) = histogramme animé
+// ======================================================================
+var it=function(a,s,t,c){return '<div class="it"><span>'+a+(s?'<small>'+s+'</small>':'')+'</span><b class="tg '+(c||'')+'">'+t+'</b></div>'};
+var tot=function(a,b){return '<div class="it tot"><span>'+a+'</span><b>'+b+'</b></div>'};
+var bars=function(a){return '<div class="bars" style="height:150px">'+a.map(function(h){return '<i style="--h:'+h+'%"></i>'}).join('')+'</div>'};
+// ======================================================================
+// LISTE DES FONCTIONNALITÉS (10 entrées) — c'est ici qu'on modifie le contenu
+// Chaque entrée contient :
+//   id → ancre du lien (ex. fonctionnalites.html#stocks)
+//   t  → titre              d  → description courte
+//   p  → tracé de l'icône (SVG)
+//   l  → liste des 3 points clés (une phrase chacun)
+//   i  → illustration (HTML fabriqué avec it(), tot(), bars())
+// Pour ajouter une fonctionnalité : copiez une entrée {…}, séparez par une virgule.
+// ======================================================================
+var F=[
+// ---------- Fonctionnalité 1 — Gestion multi-sites ----------
+{id:'multi-sites',t:'Gestion multi-sites',p:'M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6',d:'Pilotez toutes vos boutiques, magasins et dépôts depuis un seul compte.',l:['Une vue globale et une vue par site','Transferts de stock entre sites','Droits d\'accès par boutique'],i:it('Boutique centre','Ouverte · 186 ventes','En ligne')+it('Magasin nord','Ouvert · 94 ventes','En ligne')+it('Dépôt principal','Entrées du jour : 12','Sync ✓')},
+// ---------- Fonctionnalité 2 — Gestion des stocks ----------
+{id:'stocks',t:'Gestion des stocks',p:'M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8',d:'Sachez à tout moment ce qu\'il vous reste, où, et ce qu\'il faut recommander.',l:['Niveaux en temps réel','Alertes quand un seuil est atteint','Entrées, sorties et inventaires tracés'],i:it('Riz 25 kg','320 en stock','OK')+it('Huile 5 L','8 en stock · seuil 20','Faible','w')+it('Sucre 1 kg','145 en stock','OK')},
+// ---------- Fonctionnalité 3 — Ventes et caisse ----------
+{id:'ventes',t:'Ventes et caisse',p:'M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6',d:'Encaissez rapidement et gardez la trace de chaque opération.',l:['Encaissement rapide','Tickets et bons générés automatiquement','Historique complet des ventes'],i:it('2 × Riz 25 kg','','45 000','n')+it('1 × Huile 5 L','','6 500','n')+tot('Total','51 500')+'<div class="cb">Encaisser</div>'},
+// ---------- Fonctionnalité 4 — Achats et fournisseurs ----------
+{id:'achats',t:'Achats et fournisseurs',p:'M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4',d:'Commandez, réceptionnez et suivez vos fournisseurs sans papier à retrouver.',l:['Commandes et réceptions','Suivi par fournisseur','Stock mis à jour à la réception'],i:it('Commande #A-12','Fournisseur Alpha','Commandée','n')+it('Commande #A-11','Fournisseur Beta','Reçue')+it('Commande #A-10','Dépôt principal','Reçue')},
+// ---------- Fonctionnalité 5 — Statistiques et rapports ----------
+{id:'rapports',t:'Statistiques et rapports',p:'M4 20V10M10 20V4M16 20v-7M22 20H2',d:'Ventes, dépenses et marges lisibles en un coup d\'œil.',l:['Tableaux de bord clairs','Comparaison par période et par site','Meilleures ventes identifiées'],i:bars([40,55,48,70,62,84,76,100])+it('Ventes du mois','','+12 %')},
+// ---------- Fonctionnalité 6 — Comptabilité ----------
+{id:'comptabilite',t:'Comptabilité',p:'M4 4h16v16H4zM8 9h8M8 13h5M8 17h3',d:'Dépenses et versements suivis pour savoir précisément où va l\'argent.',l:['Suivi des revenus et des dépenses','Bénéfice calculé automatiquement','Données prêtes à partager avec votre comptable'],i:it('Revenus','','12 450 000')+it('Dépenses','','7 130 000','w')+it('Bénéfice','','5 320 000')},
+// ---------- Fonctionnalité 7 — Gestion des employés ----------
+{id:'employes',t:'Gestion des employés',p:'M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7',d:'Donnez à chacun les accès qui correspondent à son rôle.',l:['Comptes individuels','Droits par rôle','Activité de l\'équipe suivie'],i:it('Caissier','Boutique centre','Ventes')+it('Gestionnaire de stock','Dépôt principal','Stocks')+it('Directeur','Tous les sites','Tout')},
+// ---------- Fonctionnalité 8 — Gestion des clients ----------
+{id:'clients',t:'Gestion des clients',p:'M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0',d:'Un fichier clients clair, avec l\'historique de leurs achats.',l:['Fiche et historique par client','Identification des clients réguliers','Recherche instantanée'],i:it('Client A','12 achats · dernier : hier','Fidèle')+it('Client B','5 achats','Régulier','n')+it('Client C','1 achat','Nouveau','n')},
+// ---------- Fonctionnalité 9 — Bons et documents ----------
+{id:'documents',t:'Bons et documents',p:'M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6',d:'Bons, factures et pièces générés en quelques clics.',l:['Modèles prêts à l\'emploi','Numérotation automatique','Retrouvez chaque document en un instant'],i:'<div class="doc"><b>Facture n° 0142</b><i></i><i></i><i></i>'+tot('Total','51 500')+'</div>'},
+// ---------- Fonctionnalité 10 — Synchronisation hors-ligne ----------
+{id:'hors-ligne',t:'Synchronisation hors-ligne',p:'M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01',d:'Une coupure de réseau n\'arrête plus votre activité.',l:['Vente et saisie sans connexion','Synchronisation automatique au retour du réseau','Aucune opération perdue'],i:it('Connexion','Interrompue','Hors-ligne','w')+it('Opérations','14 ventes enregistrées localement','En cours','n')+it('Connexion restaurée','Synchronisation automatique','Sync ✓')}
+];
+
+// ======================================================================
+// AFFICHAGE : crée les pastilles du haut, puis les 10 blocs à partir de la liste F
+// ======================================================================
+// Pastilles de navigation (une par fonctionnalité)
+document.getElementById('pills').innerHTML=F.map(function(f){return '<a href="#'+f.id+'">'+f.t+'</a>'}).join('');
+// Blocs de fonctionnalités : titre + description + liste + illustration
+document.getElementById('list').innerHTML=F.map(function(f){return '<article class="fr rv" id="'+f.id+'"><div class="ft"><div class="ic"><svg viewBox="0 0 24 24"><path d="'+f.p+'"/></svg></div><h2>'+f.t+'</h2><p class="sub">'+f.d+'</p><ul class="ul">'+f.l.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div><div class="ill" role="img" aria-label="Illustration : '+f.t+'">'+f.i+'</div></article>'}).join('');
+
+// ======================================================================
+// COMPORTEMENTS communs : barre collante, menu mobile, apparition au défilement
+// Même principe que sur l'accueil (voir les commentaires de index.html).
+// ======================================================================
+var nav=document.getElementById('nav'),bg=document.getElementById('bg'),mm=document.getElementById('mm');
+function sc(){nav.classList.toggle('s',scrollY>10)}sc();addEventListener('scroll',sc,{passive:true});
+bg.addEventListener('click',function(){var o=mm.classList.toggle('o');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}else els.forEach(function(el){el.classList.add('vis')});
+})();
+</script>
+</body>
+</html>

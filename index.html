@@ -1,0 +1,341 @@
+<!doctype html>
+<!--
+  ============================================================
+  ERP PRO — PAGE D'ACCUEIL (site vitrine)
+  ============================================================
+  Fichiers liés (à garder dans le même dossier) :
+    • style.css            → composants communs (couleurs, boutons, maquettes, FAQ...)
+    • home.css             → mise en page de CETTE page (hero, bento, orbite, carrousel, CTA)
+    • fonctionnalites.html → page « Voir plus » qui détaille les fonctionnalités
+    • hero-bg.mp4 + hero-poster.jpg → vidéo 3D du fond du hero
+    • fondateur.jpg        → photo de la section « À propos »
+
+  Comment modifier : cherchez un texte avec Ctrl+F, ou cherchez un
+  bandeau « SECTION : ... » pour aller directement à la bonne partie.
+  Les sections sont dans l'ordre d'affichage de la page.
+  ============================================================
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ERP Pro – Pilotez toute votre activité depuis un seul endroit</title>
+<!-- Description affichée par Google sous le titre du site -->
+<meta name="description" content="ERP Pro : ventes, stocks, achats, équipes et performances dans une plateforme unique, même avec une connexion instable.">
+<!-- Polices Google : Bricolage Grotesque (titres) et Plus Jakarta Sans (texte) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Feuille de style principale (tout le design) -->
+<link rel="stylesheet" href="style.css">
+<!-- Mise en page de l'accueil (hero en panneau, bento, orbite, carrousel...) -->
+<link rel="stylesheet" href="home.css">
+</head>
+<body id="top">
+<!-- ======================================================================
+     SECTION : NAVIGATION
+     Barre « pilule » flottante : transparente sur le hero, blanche quand on défile.
+     ====================================================================== -->
+<header class="hn" id="nav"><div class="w nv">
+<a href="#top" class="logo" aria-label="ERP Pro, accueil"><span class="lg"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>ERP Pro</a>
+<nav aria-label="Navigation principale"><ul class="nl"><li><a href="#produit">Produit</a></li><li><a href="#fonctionnalites">Fonctionnalités</a></li><li><a href="#secteurs">Secteurs</a></li><li><a href="#a-propos">À propos</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+<div class="nr"><a href="#contact">Se connecter</a><a href="#contact" class="btn b1">Demander une démo <i>→</i></a>
+<button class="bg" id="bg" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mm"><span></span></button></div></div>
+<!-- Menu mobile : s'ouvre avec le bouton hamburger (géré par le script en bas de page) -->
+
+</header>
+<!-- Menu mobile (s'ouvre avec le bouton hamburger) -->
+<div class="mm" id="mm"><a href="#produit">Produit</a><a href="#fonctionnalites">Fonctionnalités</a><a href="#secteurs">Secteurs</a><a href="#a-propos">À propos</a><a href="#faq">FAQ</a><a href="#contact">Se connecter</a><a href="#contact" class="btn b1">Demander une démo →</a></div>
+<main>
+<!-- ======================================================================
+     SECTION : HERO
+     Grand panneau teal arrondi avec nuages : titre centré, boîte de démo, maquette du dashboard + cartes flottantes.
+     Fond animé : scène d'entrepôt (gauche) + vidéo 3D (droite).
+     ====================================================================== -->
+<section class="hp" id="produit">
+<div class="clouds"></div>
+<div class="scene" aria-hidden="true"><svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+<defs><symbol id="b1" viewBox="0 0 40 44"><path d="M0 10L20 0l20 10-20 10z" fill="#CFEDE8"/><path d="M0 10l20 10v24L0 34z" fill="#22C7B5"/><path d="M20 20l20-10v24L20 44z" fill="#0F8F82"/></symbol>
+<symbol id="b2" viewBox="0 0 40 44"><path d="M0 10L20 0l20 10-20 10z" fill="#F0DAAE"/><path d="M0 10l20 10v24L0 34z" fill="#D9B06A"/><path d="M20 20l20-10v24L20 44z" fill="#B98B47"/></symbol></defs>
+<polygon points="300,140 590,285 300,420 10,285" fill="#E6F6F3" stroke="#CFEDE8" stroke-width="2"/>
+<polygon points="300,170 520,280 300,390 80,280" fill="none" stroke="#BDE5DF" stroke-width="1.5" stroke-dasharray="6 8"/>
+<use href="#b1" x="330" y="130" width="40" height="44"/><use href="#b2" x="330" y="106" width="40" height="44"/><use href="#b1" x="330" y="82" width="40" height="44"/><use href="#b2" x="370" y="150" width="40" height="44"/><use href="#b1" x="370" y="126" width="40" height="44"/><use href="#b2" x="370" y="102" width="40" height="44"/><use href="#b1" x="410" y="170" width="40" height="44"/><use href="#b2" x="410" y="146" width="40" height="44"/><use href="#b1" x="410" y="122" width="40" height="44"/><use href="#b2" x="450" y="190" width="40" height="44"/><use href="#b1" x="450" y="166" width="40" height="44"/><use href="#b1" x="40" y="250" width="40" height="44"/><use href="#b2" x="40" y="226" width="40" height="44"/><use href="#b2" x="80" y="230" width="40" height="44"/><use href="#b1" x="80" y="206" width="40" height="44"/><use href="#b2" x="80" y="182" width="40" height="44"/><use href="#b1" x="120" y="210" width="40" height="44"/><use href="#b2" x="120" y="186" width="40" height="44"/><use href="#b2" x="160" y="190" width="40" height="44"/><use href="#b1" x="160" y="166" width="40" height="44"/><use href="#b2" x="160" y="142" width="40" height="44"/><use href="#b1" x="200" y="170" width="40" height="44"/><use href="#b2" x="200" y="146" width="40" height="44"/><use href="#b2" x="240" y="150" width="40" height="44"/><use href="#b2" x="240" y="102" width="40" height="44"/>
+<path class="fx" d="M470 160Q420 200 285 205" fill="none" stroke="#22C7B5" stroke-width="2"/><path class="fx" d="M500 160Q500 190 420 190" fill="none" stroke="#22C7B5" stroke-width="2"/>
+<g class="slide"><use href="#b1" x="200" y="318" width="40" height="44"/></g>
+<g class="walk"><g transform="translate(270 340)"><g class="bob">
+<ellipse cx="0" cy="2" rx="17" ry="5" fill="#0B1220" opacity=".1"/>
+<rect x="-8" y="-24" width="6" height="24" rx="2" fill="#0B1220"/><rect x="2" y="-24" width="6" height="24" rx="2" fill="#0B1220"/>
+<rect x="-11" y="-52" width="22" height="30" rx="7" fill="#0F8F82"/><rect x="-11" y="-40" width="22" height="4" fill="#22C7B5"/>
+<circle cx="0" cy="-62" r="9" fill="#7A4B2A"/><path d="M-10-64a10 10 0 0120 0z" fill="#FDB022"/>
+<use href="#b2" x="-16" y="-48" width="32" height="35"/></g></g></g>
+<g class="flt" transform="translate(410 40)"><rect width="180" height="100" rx="14" fill="#fff" stroke="#E4E7EC"/><circle cx="26" cy="26" r="11" fill="#E6F6F3"/><path d="M21 26l4 4 8-8" fill="none" stroke="#0F8F82" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><text x="46" y="31" font-family="Plus Jakarta Sans,sans-serif" font-size="13" font-weight="700" fill="#101828">Stock à jour</text><rect x="18" y="62" width="22" height="24" rx="4" fill="#CFEDE8"/><rect x="48" y="52" width="22" height="34" rx="4" fill="#22C7B5"/><rect x="78" y="44" width="22" height="42" rx="4" fill="#0F8F82"/><rect x="108" y="56" width="22" height="30" rx="4" fill="#22C7B5"/><rect x="138" y="48" width="22" height="38" rx="4" fill="#0F8F82"/></g>
+</svg></div>
+<video class="vbg" muted loop autoplay playsinline preload="auto" poster="hero-poster.jpg" aria-hidden="true" tabindex="-1"><source src="hero-bg.mp4" type="video/mp4"></video>
+<span class="chp l"><span class="cc"><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></span>Gestion multi-sites</span>
+<span class="chp r"><span class="cc"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></span>Stocks et ventes</span>
+<div class="hc">
+<span class="sp"><span class="av3"><i><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i><i><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i><i><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i></span>Pensé pour les entreprises africaines</span>
+<h1>Pilotez toute votre activité. <em>Depuis un seul endroit.</em></h1>
+<p class="sub">Ventes, stocks, achats, équipes et performances : une plateforme unique pour garder le contrôle de votre activité, même lorsque la connexion devient instable.</p>
+<div class="cp2"><span>Recevez une démo adaptée à votre activité</span><a class="btn b1" href="https://wa.me/22892877153?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27ERP%20Pro." target="_blank" rel="noopener">Demander une démo <b class="ar">→</b></a></div>
+</div>
+<div class="hs rv">
+<div class="fc a"><small>Ventes · 7 jours</small><b>+12 %</b><svg viewBox="0 0 120 40" width="100%" aria-hidden="true"><path d="M0 32C20 30 28 36 48 22S78 24 96 12 112 8 120 4" fill="none" stroke="#0F8F82" stroke-width="3" stroke-linecap="round"/></svg></div>
+<div class="fc b"><svg viewBox="0 0 42 42" width="64" aria-hidden="true"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#E6F6F3" stroke-width="6"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#0F8F82" stroke-width="6" stroke-dasharray="38 62" stroke-dashoffset="0" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#22C7B5" stroke-width="6" stroke-dasharray="27 73" stroke-dashoffset="-38" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#9FDCD2" stroke-width="6" stroke-dasharray="35 65" stroke-dashoffset="-65" transform="rotate(-90 21 21)"/></svg><div><b>Répartition</b><small>par boutique</small></div></div>
+<div class="app"><div class="ab"><i></i><i></i><i></i><span>app.erppro.com/tableau-de-bord</span></div>
+<div class="ap"><div class="sd"><div class="a">Tableau de bord</div><div>Ventes</div><div>Stocks</div><div>Achats</div><div>Clients</div><div>Employés</div><div>Rapports</div></div>
+<div class="mn"><div class="kp">
+<div class="k"><small>Chiffre d'affaires</small><b>4 820 000</b><u>+12 %</u></div><div class="k"><small>Ventes aujourd'hui</small><b>186</b><u>+8 %</u></div><div class="k"><small>Stock faible</small><b>12</b><u class="d">à traiter</u></div><div class="k"><small>Boutiques actives</small><b>5</b><u>en ligne</u></div></div>
+<div class="two"><div class="pn"><h4>Ventes des 7 derniers jours</h4>
+<svg class="ln" viewBox="0 0 400 120" width="100%" role="img" aria-label="Courbe des ventes en hausse"><defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22C7B5" stop-opacity=".35"/><stop offset="1" stop-color="#22C7B5" stop-opacity="0"/></linearGradient></defs><path d="M0 90C50 80 70 95 110 65S190 70 230 45 320 55 400 15V120H0Z" fill="url(#gA)"/><path class="l" d="M0 90C50 80 70 95 110 65S190 70 230 45 320 55 400 15" fill="none" stroke="#0F8F82" stroke-width="3" stroke-linecap="round"/></svg></div>
+<div class="pn"><h4>Produits les plus vendus</h4><div class="pr"><div><span>Riz 25 kg</span><b>42</b><i style="--v:90%"></i></div><div><span>Huile 5 L</span><b>31</b><i style="--v:68%"></i></div><div><span>Sucre 1 kg</span><b>24</b><i style="--v:52%"></i></div></div></div></div>
+<div class="two"><div class="pn"><h4>Activité récente</h4><div class="tx"><div><span>Vente #1042<small>Boutique centre</small></span><b>+ 32 500</b></div><div><span>Réapprovisionnement<small>Dépôt principal</small></span><b>+ 120 unités</b></div></div></div>
+<div class="pn"><h4>Synchronisation</h4><div style="display:flex;gap:10px;align-items:center;font-size:13px;font-weight:600"><span class="dot"></span>Toutes les boutiques à jour</div></div></div></div></div></div>
+</div>
+</section>
+<!-- ======================================================================
+     PASTILLES QUI DÉFILENT
+     Les 10 modules, sur 2 rangées en sens inverse (décoratif).
+     ====================================================================== -->
+<div class="mqw" aria-hidden="true"><div class="mq "><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></i>Gestion multi-sites</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i>Gestion des stocks</span><span class="mp on"><i><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i>Ventes et caisse</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4"/></svg></i>Achats et fournisseurs</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>Statistiques et rapports</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg></i>Comptabilité</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></i>Gestion des employés</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg></i>Gestion des clients</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></i>Bons et documents</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></i>Synchronisation hors-ligne</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></i>Gestion multi-sites</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i>Gestion des stocks</span><span class="mp on"><i><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i>Ventes et caisse</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4"/></svg></i>Achats et fournisseurs</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>Statistiques et rapports</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg></i>Comptabilité</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></i>Gestion des employés</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg></i>Gestion des clients</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></i>Bons et documents</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></i>Synchronisation hors-ligne</span></div><div class="mq r"><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg></i>Comptabilité</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></i>Gestion des employés</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg></i>Gestion des clients</span><span class="mp on"><i><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></i>Bons et documents</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></i>Synchronisation hors-ligne</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></i>Gestion multi-sites</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i>Gestion des stocks</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i>Ventes et caisse</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4"/></svg></i>Achats et fournisseurs</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>Statistiques et rapports</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg></i>Comptabilité</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></i>Gestion des employés</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg></i>Gestion des clients</span><span class="mp on"><i><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></i>Bons et documents</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></i>Synchronisation hors-ligne</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></i>Gestion multi-sites</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i>Gestion des stocks</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i>Ventes et caisse</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4"/></svg></i>Achats et fournisseurs</span><span class="mp"><i><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i>Statistiques et rapports</span></div></div>
+<!-- ======================================================================
+     SECTION : SIMPLIFIEZ LA GESTION
+     3 cartes décalées à gauche + dashboard incliné à droite (la taille est ajustée par le script).
+     ====================================================================== -->
+<section class="sec" id="simplifier"><div class="w">
+<div class="h2c rv"><span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i>Outils simples pour équipes occupées</span><h2>Simplifiez la gestion,<br>gagnez en efficacité</h2></div>
+<div class="sm">
+<div class="sl rv">
+<div class="sk"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></div><div><h3>Gestion multi-sites</h3><p>Pilotez toutes vos boutiques, magasins et dépôts depuis un seul compte.</p></div></div>
+<div class="sk"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></div><div><h3>Stocks à jour en temps réel</h3><p>Niveaux, alertes de seuil et mouvements tracés, sans cahier ni fichier Excel.</p></div></div>
+<div class="sk"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></div><div><h3>Une activité qui continue sans réseau</h3><p>Vendez hors connexion : tout se synchronise au retour d'Internet.</p></div></div>
+</div>
+<div class="tw rv"><div class="tbk"></div><div class="tt"><div class="ti"><div class="big rv"><div class="app" style="border-radius:20px"><div class="ab"><i></i><i></i><i></i><span>app.erppro.com/vue-d-ensemble</span></div><div class="mn" style="padding:24px">
+<div class="k3"><div class="k"><small>Revenus</small><b>12 450 000</b><u>+9 %</u></div><div class="k"><small>Dépenses</small><b>7 130 000</b><u class="d">+3 %</u></div><div class="k"><small>Bénéfice</small><b>5 320 000</b><u>+18 %</u></div></div>
+<div class="two"><div class="pn"><h4>Ventes par mois</h4><div class="bars" role="img" aria-label="Histogramme des ventes mensuelles"><i style="--h:40%"></i><i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:70%"></i><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:76%"></i><i style="--h:100%"></i></div></div>
+<div class="pn"><h4>Boutiques</h4><div class="pr"><div><span>Boutique centre</span><b>38 %</b><i style="--v:90%"></i></div><div><span>Magasin nord</span><b>27 %</b><i style="--v:65%"></i></div><div><span>Dépôt principal</span><b>21 %</b><i style="--v:50%"></i></div></div></div></div>
+<div class="two"><div class="pn"><h4>Transactions récentes</h4><div class="tx"><div><span>Vente #1042<small>Boutique centre</small></span><b>+ 32 500</b></div><div><span>Achat fournisseur<small>Dépôt principal</small></span><b style="color:#D92D20">− 210 000</b></div><div><span>Vente #1041<small>Magasin nord</small></span><b>+ 18 000</b></div></div></div>
+<div class="pn"><h4>Inventaire</h4><div class="pr"><div><span>Produits en stock</span><b>1 284</b><i style="--v:82%"></i></div><div><span>Sous le seuil</span><b>12</b><i style="--v:10%"></i></div></div></div></div></div></div>
+<p class="note">Interface illustrative, données fictives.</p></div></div></div></div>
+</div></div></section>
+<!-- ======================================================================
+     SECTION : FONCTIONNALITÉS (bento)
+     3 cartes en haut, 1 large en bas, 1 haute à droite. Le bouton « Voir les fonctionnalités » ouvre fonctionnalites.html.
+     ====================================================================== -->
+<section class="sec" id="fonctionnalites" style="padding-top:40px"><div class="w">
+<div class="h2c rv"><span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></i>Pensé pour le terrain</span><h2>Une technologie qui travaille<br>pour vos opérations</h2></div>
+<div class="tg2">
+<article class="tc rv"><div class="tv"><div class="mc"><svg viewBox="0 0 42 42" width="96" aria-hidden="true"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#E6F6F3" stroke-width="6"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#0F8F82" stroke-width="6" stroke-dasharray="65 35" stroke-dashoffset="0" transform="rotate(-90 21 21)"/><circle cx="21" cy="21" r="15.9" fill="none" stroke="#22C7B5" stroke-width="6" stroke-dasharray="35 65" stroke-dashoffset="-65" transform="rotate(-90 21 21)"/></svg><div class="lg2"><span><b>65 %</b> Ventes</span><span><b>35 %</b> Achats</span></div></div></div><h3>Rapports automatisés</h3><p>Ventes, dépenses et marges calculées pour vous, par site et par période.</p></article>
+<article class="tc rv"><div class="tv"><div class="oc"><div class="rg0"></div><i style="left:50.0%;top:12.0%"><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></i><i style="left:82.9%;top:31.0%"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></i><i style="left:82.9%;top:69.0%"><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg></i><i style="left:50.0%;top:88.0%"><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></i><i style="left:17.1%;top:69.0%"><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></i><i style="left:17.1%;top:31.0%"><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg></i><i class="c0"><svg viewBox="0 0 24 24" style="stroke:#fff;width:26px;height:26px"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></i></div></div><h3>Une vision globale</h3><p>Tous vos modules reliés : ce qui se passe dans une boutique se voit aussitôt dans l'ensemble.</p></article>
+<article class="tc tall rv"><div class="tv"><div class="phn"><div class="sc2"><div class="tp"><b>Caisse</b><span style="color:#B54708;background:#FEF3E6;padding:3px 8px;border-radius:99px;font-size:10.5px">Hors-ligne</span></div><div class="ln2"><span>2 × Riz 25 kg</span><b>45 000</b></div><div class="ln2"><span>1 × Huile 5 L</span><b>6 500</b></div><div class="ln2" style="background:#0B1220;color:#fff"><span>Total</span><b>51 500</b></div><div class="bt">Encaisser</div><div class="sy2">Synchronisation automatique</div></div></div></div><h3>Vendez même sans connexion</h3><p>Une coupure de réseau n'arrête plus votre caisse : les opérations sont enregistrées puis synchronisées toutes seules.</p><a class="btn b1" href="https://wa.me/22892877153?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27ERP%20Pro." target="_blank" rel="noopener">Demander une démo <b class="ar">→</b></a></article>
+<article class="tc wide rv"><div class="tv"><div class="mc" style="width:82%;justify-items:stretch"><span>Ventes par mois</span><div class="bars" style="height:96px;width:100%;--x:0"><i style="--h:40%"></i><i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:70%"></i><i style="--h:62%"></i><i style="--h:84%"></i><i style="--h:76%"></i><i style="--h:100%"></i></div></div></div><div><h3 style="padding:0">Toute l'équipe, un seul outil</h3><p style="padding:0">Employés, clients, fournisseurs, documents : chacun accède à ce qui le concerne, au même endroit.</p><a class="btn b1" href="fonctionnalites.html">Voir les fonctionnalités <b class="ar">→</b></a></div></article>
+</div></div></section>
+<!-- ======================================================================
+     SECTION : COMMENT ÇA MARCHE
+     Pile de cartes + pastille qui tourne + 4 étapes cliquables (le script change le texte de la carte).
+     ====================================================================== -->
+<section class="sec" id="comment" style="background:#fff;border-block:1px solid var(--bd)"><div class="w"><div class="hw">
+<div class="rv"><span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i>Démarrage simple</span><h2 style="color:var(--pd);margin:16px 0 40px">Comment fonctionne<br>ERP Pro ?</h2>
+<div class="stk"><article class="tc"><div class="tv"><div class="mc" style="width:84%;justify-items:stretch"><span>Ventes des 7 derniers jours</span><svg viewBox="0 0 120 40" width="100%" aria-hidden="true"><path d="M0 32C20 30 28 36 48 22S78 24 96 12 112 8 120 4" fill="none" stroke="#0F8F82" stroke-width="3" stroke-linecap="round"/></svg></div></div><h3 id="hwT">Demandez une démo</h3><p id="hwP">Nous vous présentons l'outil à partir de vos propres cas d'usage.</p></article></div></div>
+<div class="rv"><svg class="bdg" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="cp" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><text font-size="10" font-weight="700" letter-spacing="1.6" fill="#08756A"><textPath href="#cp">DÉMARRAGE RAPIDE • SANS PAPIER • </textPath></text><circle cx="60" cy="60" r="22" fill="#E6F6F3"/><path d="M52 68L68 52M54 52H68V66" fill="none" stroke="#0F8F82" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="stps"><div class="stp on" role="button" tabindex="0"><i>1</i>Demandez une démo</div><div class="stp" role="button" tabindex="0"><i>2</i>Configurez votre entreprise</div><div class="stp" role="button" tabindex="0"><i>3</i>Formez votre équipe</div><div class="stp" role="button" tabindex="0"><i>4</i>Pilotez votre activité</div></div></div>
+</div></div></section>
+<!-- ======================================================================
+     SECTION : TOUS VOS MODULES (orbite)
+     Panneau teal avec nuages : 8 modules en orbite autour du logo.
+     ====================================================================== -->
+<section class="mo" id="modules"><div class="clouds"></div><span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></i>Un seul centre de pilotage</span><h2>Tous vos modules,<br>reliés au même endroit</h2><div class="orb"><i class="rg" style="width:46%;height:50%"></i><i class="rg" style="width:82%;height:90%"></i><div class="ct"><svg viewBox="0 0 24 24" style="stroke:#fff;width:54px;height:54px;fill:none;stroke-width:2"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></div><div class="ob" style="left:50.0%;top:7.0%;animation-delay:-0s"><svg viewBox="0 0 24 24" ><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg><span>Ventes</span></div><div class="ob" style="left:79.0%;top:19.6%;animation-delay:-1s"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg><span>Stocks</span></div><div class="ob" style="left:91.0%;top:50.0%;animation-delay:-2s"><svg viewBox="0 0 24 24" ><path d="M3 7h18v12H3zM16 3l-4 4-4-4M7 13h4"/></svg><span>Achats</span></div><div class="ob" style="left:79.0%;top:80.4%;animation-delay:-3s"><svg viewBox="0 0 24 24" ><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></svg><span>Clients</span></div><div class="ob" style="left:50.0%;top:93.0%;animation-delay:-4s"><svg viewBox="0 0 24 24" ><path d="M4 4h16v16H4zM8 9h8M8 13h5M8 17h3"/></svg><span>Finances</span></div><div class="ob" style="left:21.0%;top:80.4%;animation-delay:-5s"><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg><span>Employés</span></div><div class="ob" style="left:9.0%;top:50.0%;animation-delay:-6s"><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg><span>Documents</span></div><div class="ob" style="left:21.0%;top:19.6%;animation-delay:-7s"><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg><span>Hors-ligne</span></div></div></section>
+<!-- ======================================================================
+     SECTION : MODE HORS-LIGNE
+     ====================================================================== -->
+<section class="sec off" id="hors-ligne"><div class="w">
+<div class="hd rv"><h2>Même sans connexion, votre activité continue.</h2><p class="sub">Une coupure de réseau ne doit jamais arrêter votre caisse. ERP Pro prend le relais et se synchronise tout seul.</p></div>
+<div class="fw" id="fw" aria-live="polite">
+<div class="fs on"><span class="dot"></span><b>Mode connecté</b><p>Connexion Internet active, données en direct.</p></div>
+<div class="fs"><span class="dot r"></span><b>Connexion interrompue</b><p>Passage automatique en mode hors-ligne.</p></div>
+<div class="fs"><span class="dot r"></span><b>Les opérations continuent</b><p>Ventes, bons et stocks enregistrés localement.</p></div>
+<div class="fs"><span class="dot"></span><b>Synchronisation automatique</b><p>Connexion restaurée : tout est envoyé, rien n'est perdu.</p><div class="sy"><i></i></div></div></div></div></section>
+<!-- ======================================================================
+     SECTION : SECTEURS D'ACTIVITÉ
+     ====================================================================== -->
+<section class="sec" id="secteurs"><div class="w">
+<div class="hd c rv"><h2>Une solution qui s'adapte à votre activité.</h2></div>
+<div class="sc">
+<!-- Secteur : Boutiques -->
+<article class="bc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9"/></svg></div><h3>Boutiques</h3><p>Caisse, produits, clients et rapports pour chaque point de vente.</p></article>
+<!-- Secteur : Magasins et dépôts -->
+<article class="bc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12M9 21v-7h6v7"/></svg></div><h3>Magasins et dépôts</h3><p>Entrées, sorties et inventaire pour des stocks fiables.</p></article>
+<!-- Secteur : Restaurants et bars -->
+<article class="bc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3v8a3 3 0 006 0V3M9 3v18M18 3c-2 2-3 5-3 8h3v10"/></svg></div><h3>Restaurants et bars</h3><p>Tables, unités et ventes suivies par service.</p></article>
+<!-- Secteur : Distributeurs -->
+<article class="bc rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M1 6h13v10H1zM14 10h5l3 3v3h-8zM6 19a2 2 0 100-4 2 2 0 000 4zM18 19a2 2 0 100-4 2 2 0 000 4z"/></svg></div><h3>Distributeurs</h3><p>Livraisons, tournées et suivi des clients revendeurs.</p></article>
+<!-- Secteur : Entreprises multi-sites -->
+<article class="bc rv dk"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 12a3 3 0 100-6 3 3 0 000 6zM5 21a2 2 0 100-4 2 2 0 000 4zM19 21a2 2 0 100-4 2 2 0 000 4zM12 12v4M7 17l3-3M17 17l-3-3"/></svg></div><h3>Entreprises multi-sites</h3><p>Une vue consolidée de tous vos sites, avec des droits par équipe.</p></article></div></div></section>
+<!-- ======================================================================
+     SECTION : POURQUOI ERP PRO ?
+     ====================================================================== -->
+<section class="sec"><div class="w">
+<div class="hd c rv"><h2>Pourquoi ERP Pro ?</h2></div>
+<div class="vs rv"><div class="vr"><div>GESTION TRADITIONNELLE</div><div>ERP PRO</div></div>
+<div class="vr"><div><span class="x">✕</span>Cahiers</div><div><span class="v">✓</span>Données centralisées</div></div>
+<div class="vr"><div><span class="x">✕</span>Excel dispersés</div><div><span class="v">✓</span>Dashboard unique</div></div>
+<div class="vr"><div><span class="x">✕</span>Suivi manuel</div><div><span class="v">✓</span>Alertes automatiques</div></div>
+<div class="vr"><div><span class="x">✕</span>Connexion obligatoire</div><div><span class="v">✓</span>Mode hors-ligne</div></div>
+<div class="vr"><div><span class="x">✕</span>Informations dispersées</div><div><span class="v">✓</span>Vision globale</div></div></div></div></section>
+<!-- ======================================================================
+     SECTION : CE QUE ERP PRO CHANGE POUR VOUS
+     Carrousel de cartes qui défilent (bénéfices, pas de faux témoignages).
+     ====================================================================== -->
+<section class="sec"><div class="w"><div class="bhd rv"><div><span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i>Ce que vous gagnez</span><h2>Ce que ERP Pro<br>change pour vous</h2></div><a class="btn b1" href="fonctionnalites.html">Voir les fonctionnalités <b class="ar">→</b></a></div></div><div class="mqw" style="padding-top:20px"><div class="mq slow"><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></div><h3>Données centralisées</h3><p>Ventes, stocks et achats au même endroit, pour chaque site.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></div><h3>Alertes de stock</h3><p>Soyez prévenu avant la rupture, produit par produit.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></div><h3>Travail sans connexion</h3><p>Vendez même quand le réseau coupe : la synchronisation est automatique.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></div><h3>Accès par rôle</h3><p>Chacun voit uniquement ce qui le concerne.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></div><h3>Documents en quelques clics</h3><p>Bons, factures et pièces générés et retrouvés facilement.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Décisions plus rapides</h3><p>Des tableaux de bord clairs pour piloter sans calcul manuel.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M3 9l1.5-5h15L21 9M4 9v11h16V9M9 20v-6h6v6"/></svg></div><h3>Données centralisées</h3><p>Ventes, stocks et achats au même endroit, pour chaque site.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg></div><h3>Alertes de stock</h3><p>Soyez prévenu avant la rupture, produit par produit.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M5 12a7 7 0 0114 0M8.5 15a3.5 3.5 0 017 0M12 19h.01"/></svg></div><h3>Travail sans connexion</h3><p>Vendez même quand le réseau coupe : la synchronisation est automatique.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M16 11a4 4 0 100-8 4 4 0 000 8zM2 21a7 7 0 0114 0M18 14a6 6 0 014 7"/></svg></div><h3>Accès par rôle</h3><p>Chacun voit uniquement ce qui le concerne.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M14 3H6v18h12V7zM14 3v4h4M9 12h6M9 16h6"/></svg></div><h3>Documents en quelques clics</h3><p>Bons, factures et pièces générés et retrouvés facilement.</p></article><article class="bn"><div class="ic"><svg viewBox="0 0 24 24" ><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>Décisions plus rapides</h3><p>Des tableaux de bord clairs pour piloter sans calcul manuel.</p></article></div></div></section>
+<!-- ======================================================================
+     SECTION : À PROPOS
+     ====================================================================== -->
+<section class="sec" id="a-propos" style="background:#fff;border-top:1px solid var(--bd)"><div class="w ab2">
+<div class="rv"><h2>Conçu par un ingénieur, pour ceux qui font tourner le commerce.</h2><div class="vl">
+<div><b>Une vision</b><span>Donner aux dirigeants des outils fiables, à la hauteur des réalités du terrain.</span></div>
+<div><b>Une ambition</b><span>Faire d'ERP Pro la référence de la gestion pour les entreprises africaines.</span></div>
+<div><b>Une exigence</b><span>Un produit simple à prendre en main, robuste même sans réseau.</span></div></div></div>
+<div class="pc rv"><!-- Photo du fondateur : pour la changer, remplacez le fichier fondateur.jpg (image carrée recommandée) -->
+<img class="av" src="fondateur.jpg" alt="Portrait d'Abdou-Akim Gbadamassi" width="88" height="88" loading="lazy"><h3>Abdou-Akim Gbadamassi</h3><p>Senior Software Engineer, manager et formateur en informatique.</p>
+<div class="chips"><span>MERN</span><span>Flutter</span><span>Laravel</span><span>Python</span><span>Data Science et BI</span><span>Consultant Odoo</span></div>
+<p style="margin:20px 0 14px">Ambassadeur 10000 Codeurs. Participant aux programmes YALI Dakar et US Exchange Program.</p>
+<a href="https://www.linkedin.com/in/abdou-akim-gbadamassi-70373a183/" class="btn b2" target="_blank" rel="noopener">Voir le profil LinkedIn <i>→</i></a></div></div></section>
+<!-- ======================================================================
+     SECTION : FAQ
+     ====================================================================== -->
+<section class="sec" id="faq"><div class="w">
+<div class="hd c rv"><h2>Questions fréquentes</h2></div>
+<div class="fq" id="fq">
+<div class="fi"><button aria-expanded="false">ERP Pro fonctionne-t-il hors connexion ?</button><div class="fa"><div><p>Oui. Vous continuez à vendre et à enregistrer vos opérations sans réseau ; tout est synchronisé automatiquement au retour de la connexion.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">Puis-je gérer plusieurs boutiques ?</button><div class="fa"><div><p>Oui. ERP Pro est conçu pour le multi-sites, avec une vue générale et une vue détaillée par boutique, magasin ou dépôt.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">Mes données sont-elles sécurisées ?</button><div class="fa"><div><p>Les accès sont protégés par identifiant et mot de passe, avec des droits définis pour chaque utilisateur.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">Puis-je gérer plusieurs utilisateurs ?</button><div class="fa"><div><p>Oui. Vous créez les comptes de votre équipe et attribuez à chacun les accès correspondant à son rôle.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">ERP Pro convient-il aux petites entreprises ?</button><div class="fa"><div><p>Oui. Vous pouvez commencer avec une seule boutique et ajouter des sites et des utilisateurs à mesure que votre activité grandit.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">Comment se déroule la configuration ?</button><div class="fa"><div><p>Nous paramétrons avec vous vos sites, vos produits et vos utilisateurs, puis nous formons votre équipe.</p></div></div></div>
+<div class="fi"><button aria-expanded="false">Combien coûte ERP Pro ?</button><div class="fa"><div><p>Le tarif est établi sur devis, selon le nombre de sites et d'utilisateurs. Demandez une démo pour recevoir une proposition adaptée.</p></div></div></div>
+</div></div></section>
+<!-- ======================================================================
+     SECTION : APPEL À L'ACTION FINAL + CONTACT
+     Cible de tous les boutons de démo (ancre #contact).
+     ====================================================================== -->
+<section class="cta2-wrap" id="contact" style="padding-top:96px"><div class="cta2"><div class="clouds"></div>
+<a class="sb s1" href="https://www.linkedin.com/in/abdou-akim-gbadamassi-70373a183/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" ><path d="M4 9h4v11H4zM6 4a2 2 0 100 4 2 2 0 000-4zM10 9h4v2c1-2 6-3 6 2v7h-4v-6c0-2-2-2-2 0v6h-4z"/></svg></a><a class="sb s2" href="https://wa.me/22892877153" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" ><path d="M3 21l1.6-5A8.5 8.5 0 1112 20.5a8.5 8.5 0 01-4-1zM9 9c0 3 3 6 6 6l1-2-2-1-1 .5c-1-.5-2-1.5-2.5-2.5L11 9l-1-2z"/></svg></a><a class="sb s3" href="mailto:gbadamassia@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" ><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg></a>
+<span class="pb"><i><svg viewBox="0 0 24 24" ><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></i>Démo personnalisée</span><h2>Prêt à reprendre le contrôle de votre activité ?</h2>
+<p style="color:rgba(255,255,255,.88);font-size:18px;max-width:560px;margin:16px auto 0">Découvrez comment ERP Pro peut simplifier votre gestion et vous donner une vision claire de votre entreprise.</p>
+<div class="cp2"><a href="mailto:gbadamassia@gmail.com" style="color:inherit">gbadamassia@gmail.com</a><a class="btn b1" href="https://wa.me/22892877153?text=Bonjour%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27ERP%20Pro." target="_blank" rel="noopener">Demander une démo <b class="ar">→</b></a></div></div></section>
+</main>
+<!-- ======================================================================
+     SECTION : PIED DE PAGE
+     ====================================================================== -->
+<footer><div class="w"><div class="fg">
+<div><a href="#top" class="logo"><span class="lg"><svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/></svg></span>ERP Pro</a><p style="margin-top:14px">La plateforme de gestion pour piloter toute votre activité, depuis un seul endroit.</p>
+<a class="btn b1" style="margin-top:16px" href="https://wa.me/22892877153" target="_blank" rel="noopener">Écrire sur WhatsApp <b class="ar">→</b></a>
+<div class="so"><a href="https://www.linkedin.com/in/abdou-akim-gbadamassi-70373a183/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 9h4v11H4zM6 4a2 2 0 100 4 2 2 0 000-4zM10 9h4v2c1-2 6-3 6 2v7h-4v-6c0-2-2-2-2 0v6h-4z"/></svg></a><a href="https://wa.me/22892877153" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 21l1.6-5A8.5 8.5 0 1112 20.5a8.5 8.5 0 01-4-1zM9 9c0 3 3 6 6 6l1-2-2-1-1 .5c-1-.5-2-1.500-2.500-2.500L11 9l-1-2z"/></svg></a></div></div>
+<div><h4>Produit</h4><ul><li><a href="#fonctionnalites">Fonctionnalités</a></li><li><a href="#faq">Tarifs</a></li><li><a href="#contact">Démo</a></li></ul></div>
+<div><h4>Entreprise</h4><ul><li><a href="#a-propos">À propos</a></li><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><h4>Ressources</h4><ul><li><a href="mailto:gbadamassia@gmail.com?subject=Documentation%20ERP%20Pro">Documentation</a></li><li><a href="mailto:gbadamassia@gmail.com?subject=Support%20ERP%20Pro">Support</a></li></ul></div></div>
+<div class="cp"><span>© 2026 ERP Pro. Tous droits réservés.</span><span>Togo · +228 92 87 71 53</span></div></div></footer>
+<!-- ======================================================================
+     SCRIPT PRINCIPAL — comportements de la page
+       1. Barre de navigation   2. Menu mobile   3. Apparition au défilement
+       4. FAQ (accordéon)       5. Hors-ligne (étapes qui défilent)
+     ====================================================================== -->
+<!-- ======================================================================
+     SCRIPT PRINCIPAL — comportements de la page
+       1. Barre de navigation   2. Menu mobile   3. Apparition au défilement
+       4. FAQ (accordéon)       5. Hors-ligne (étapes qui défilent)
+     ====================================================================== -->
+<script>
+(function(){
+  // --- Éléments de la page dont on a besoin ---
+  var nav=document.getElementById('nav');   // barre du haut
+  var bg=document.getElementById('bg');     // bouton hamburger
+  var mm=document.getElementById('mm');     // menu mobile
+
+  // --- 1. BARRE DE NAVIGATION : ajoute la classe "s" (effet verre dépoli) dès qu'on défile ---
+  function sc(){nav.classList.toggle('s',scrollY>10)}
+  sc();                                          // état au chargement
+  addEventListener('scroll',sc,{passive:true});  // puis à chaque défilement
+
+  // --- 2. MENU MOBILE : le bouton ouvre / ferme ---
+  bg.addEventListener('click',function(){
+    var o=mm.classList.toggle('o');                                   // true = ouvert
+    bg.setAttribute('aria-expanded',o);                               // accessibilité (lecteurs d'écran)
+    bg.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');
+  });
+  mm.addEventListener('click',function(e){   // un clic sur un lien referme le menu
+    if(e.target.tagName==='A'){mm.classList.remove('o');bg.setAttribute('aria-expanded','false')}
+  });
+
+  // --- 3. APPARITION AU DÉFILEMENT : les éléments .rv apparaissent quand ils entrent à l'écran ---
+  //     (sans ce bloc, les sections .rv resteraient invisibles : ne pas le supprimer !)
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}  // visible, une seule fois
+      });
+    },{threshold:.12});                                                // 12 % de l'élément visible
+    els.forEach(function(el){io.observe(el)});
+  }else{
+    els.forEach(function(el){el.classList.add('vis')});               // vieux navigateur : tout afficher
+  }
+
+  // --- 4. FAQ : une seule question ouverte à la fois ---
+  document.querySelectorAll('.fi button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var it=b.parentNode, o=!it.classList.contains('o');             // o = faut-il l'ouvrir ?
+      document.querySelectorAll('.fi.o').forEach(function(x){         // on referme les autres
+        x.classList.remove('o');x.firstElementChild.setAttribute('aria-expanded','false');
+      });
+      if(o){it.classList.add('o');b.setAttribute('aria-expanded','true')}
+    });
+  });
+
+  // --- 5. HORS-LIGNE : allume les 4 étapes l'une après l'autre (toutes les 2,8 s) ---
+  var st=document.querySelectorAll('#fw .fs'), i=0;
+  setInterval(function(){
+    st[i].classList.remove('on');                                     // éteint l'étape courante
+    var s=st[i].querySelector('.sy i'); if(s)s.classList.remove('go');
+    i=(i+1)%st.length;                                                // passe à la suivante (boucle)
+    st[i].classList.add('on');                                        // allume la nouvelle
+    var y=st[i].querySelector('.sy i');                               // barre de synchronisation (4e étape)
+    if(y){void y.offsetWidth;y.classList.add('go')}                   // relance l'animation de la barre
+  },2800);
+})();
+</script>
+
+<!-- ======================================================================
+     SCRIPT DE LA VIDÉO DU HERO : lance la vidéo en boucle (sans son)
+     ====================================================================== -->
+<script>
+(function(){
+  var v=document.querySelector('.hero .vbg');   // la vidéo de fond
+  // Pas de vidéo, ou visiteur qui a désactivé les animations : on ne fait rien
+  if(!v||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  v.loop=true;v.muted=true;                      // boucle + muette (obligatoire pour l'autoplay)
+  var p=v.play();if(p&&p.catch)p.catch(function(){});   // si le navigateur refuse, on ignore
+  // Met la vidéo en pause quand l'onglet est caché (économise la batterie)
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden)v.pause();
+    else{var q=v.play();if(q&&q.catch)q.catch(function(){})}
+  });
+})();
+</script>
+
+<!-- ======================================================================
+     SCRIPT DE LA MISE EN PAGE : taille du dashboard incliné + étapes « Comment ça marche »
+     ====================================================================== -->
+<script>
+(function(){
+  // --- Adapte la taille du dashboard incliné à la largeur de sa colonne ---
+  function fit(){document.querySelectorAll('.tw').forEach(function(w){w.style.setProperty('--s',(w.clientWidth/1060).toFixed(4))})}
+  fit();addEventListener('resize',fit);
+  // --- Étapes : un clic (ou Entrée) met l'étape en vert et change le texte de la carte ---
+  var T=[['Demandez une démo',"Nous vous présentons l'outil à partir de vos propres cas d'usage."],['Configurez votre entreprise',"Sites, produits et utilisateurs sont paramétrés avec vous."],['Formez votre équipe',"Votre équipe est formée à l'outil, avec des accès adaptés à chaque rôle."],['Pilotez votre activité',"Vous suivez vos chiffres au quotidien depuis un seul tableau de bord."]];
+  var S=document.querySelectorAll('.stp'),h=document.getElementById('hwT'),p=document.getElementById('hwP');
+  function pick(i){S.forEach(function(x,k){x.classList.toggle('on',k===i)});h.textContent=T[i][0];p.textContent=T[i][1]}
+  S.forEach(function(x,k){x.addEventListener('click',function(){pick(k)});x.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(k)}})});
+})();
+</script>
+</body>
+</html>
